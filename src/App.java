@@ -18,15 +18,31 @@ public class App {
     }
 
     private static void runEmpleadoExample() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        EmpleadoContoller empCtrl = new EmpleadoContoller();
+
+        boolean result = empCtrl.addEmpleado(new Empleado(1, "John", "Junior"));
+        System.out.println("Empleado ingresado: " + result);
+        result = empCtrl.addEmpleado(new Empleado(1, "John", "Junior"));
+        System.out.println("Empleado ingresado: " + result);
+
+        empCtrl.addEmpleado(new Empleado(1, "Luis", "Junior"));
+        empCtrl.addEmpleado(new Empleado(2, "Sam", "Junior"));
+        empCtrl.addEmpleado(new Empleado(3, "Andres", "Junior"));
+
+        empCtrl.displayEmpleados();
+        empCtrl.displayEmpleadosSoloNombres();
+        empCtrl.displayLlaves();
+        empCtrl.displayEmpleadosSinEntrySet();
+        empCtrl.displayValores();
+        
     }
 
     private static void runMapExamlpe() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        new Mapa();
+
+
     }
 
     private static void runEjerccios() {
-        throw new UnsupportedOperationException("Not implemented yet");
-
     }
 }
